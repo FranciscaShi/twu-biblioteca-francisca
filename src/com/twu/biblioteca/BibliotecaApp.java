@@ -31,9 +31,9 @@ public class BibliotecaApp {
                 System.out.print("\nYour choice: ");
                 opcion = leer.nextInt();
 
-                switch (opcion){
+                switch (opcion) {
                     case 1:
-                        System.out.println("List of books \n"+bookDao.showBooks());
+                        System.out.println("List of books \n" + bookDao.showBooks());
 
                         Scanner choice;
                         int choiceNumber;
@@ -47,13 +47,13 @@ public class BibliotecaApp {
 
                             choice = new Scanner(System.in);
                             System.out.print("\nYour choice: ");
-                            choiceNumber=choice.nextInt();
+                            choiceNumber = choice.nextInt();
 
                             Scanner nameOfBook;
                             String name;
 
 
-                            switch (choiceNumber){
+                            switch (choiceNumber) {
                                 case 1:
                                     choiceNumber = returnBook(bookDao, choiceNumber);
 
@@ -68,9 +68,7 @@ public class BibliotecaApp {
                                     break;
                             }
 
-
-
-                        }while(choiceNumber!=3);
+                        } while (choiceNumber != 3);
 
                         break;
 
@@ -79,11 +77,11 @@ public class BibliotecaApp {
                         break;
                 }
 
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
-        }while(opcion!=1);
+        } while (opcion != 1);
 
 
     }
@@ -100,16 +98,16 @@ public class BibliotecaApp {
             System.out.print("Write the name of the book did you need: ");
             name = nameOfBook.nextLine();
 
-            if (bookDao.checkBookName(name)){
-                bookDao.selectBook(name);
-                checkBookName=1;
-            }else{
+            if (bookDao.checkBookName(name)) {
+                bookDao.selectBookByName(name);
+                checkBookName = 1;
+            } else {
                 System.out.println("Sorry, that is not a valid book to return\nPlease try again...\n");
                 checkBookName = 2;
             }
-        }while(checkBookName != 1);
+        } while (checkBookName != 1);
 
-        System.out.println("\nThanks you! Enjoy the book "+name);
+        System.out.println("\nThanks you! Enjoy the book " + name);
 
         System.out.println("\nDo you wish see the list of books again? (yes/no)");
         Scanner answer;
@@ -117,10 +115,10 @@ public class BibliotecaApp {
         answer = new Scanner(System.in);
         clientAnswer = answer.nextLine();
 
-        if (clientAnswer.equalsIgnoreCase("yes")){
+        if (clientAnswer.equalsIgnoreCase("yes")) {
             System.out.println(bookDao.showBooks());
-        }else{
-            choiceNumber=3;
+        } else {
+            choiceNumber = 3;
         }
         return choiceNumber;
     }
@@ -137,16 +135,16 @@ public class BibliotecaApp {
             System.out.print("Write the name of the book: ");
             name = nameOfBook.nextLine();
 
-            if (bookDao.checkBookName(name)){
-                bookDao.returnBook(name);
-                checkBookName=1;
-            }else{
+            if (bookDao.checkBookName(name)) {
+                bookDao.returnBookByName(name);
+                checkBookName = 1;
+            } else {
                 System.out.println("Sorry, that is not a valid book to return\nPlease try again...\n");
                 checkBookName = 2;
             }
-        }while(checkBookName != 1);
+        } while (checkBookName != 1);
 
-        System.out.println("\nThanks you for returning the book "+name);
+        System.out.println("\nThanks you for returning the book " + name);
 
         System.out.println("\nDo you wish see the list of books again? (yes/no)");
         Scanner answer;
@@ -154,10 +152,10 @@ public class BibliotecaApp {
         answer = new Scanner(System.in);
         clientAnswer = answer.nextLine();
 
-        if (clientAnswer.equalsIgnoreCase("yes")){
+        if (clientAnswer.equalsIgnoreCase("yes")) {
             System.out.println(bookDao.showBooks());
-        }else{
-            choiceNumber=3;
+        } else {
+            choiceNumber = 3;
         }
         return choiceNumber;
     }

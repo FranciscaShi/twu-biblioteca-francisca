@@ -7,9 +7,9 @@ public interface IBookDao {
 
     List<String> showBooks();
 
-    void returnBook(String bookName);
+    void returnBookByName(String bookName);
 
-    void selectBook(String bookName);
+    void selectBookByName(String bookName);
 
     boolean checkBookName(String bookName);
 

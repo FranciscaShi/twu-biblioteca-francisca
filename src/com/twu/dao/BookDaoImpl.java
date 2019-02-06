@@ -29,6 +29,10 @@ public class BookDaoImpl implements IBookDao {
         return books;
     }
 
+    public void setBooks(List<BookDto> books) {
+        this.books = books;
+    }
+
     public List<String> showBooks(){
 
         List<String> bookList = new ArrayList<String>();
@@ -51,7 +55,7 @@ public class BookDaoImpl implements IBookDao {
 
     }
 
-    public void returnBook(String bookName){
+    public void returnBookByName(String bookName){
 
         for (int i = INITIAL_VALUE; i<books.size(); i++){
 
@@ -61,7 +65,7 @@ public class BookDaoImpl implements IBookDao {
         }
     }
 
-    public void selectBook(String bookName){
+    public void selectBookByName(String bookName){
         //TODO: hacerle caso a intelliJ a veces, revisar foreach
 
         for (int i=INITIAL_VALUE; i<books.size(); i++){
