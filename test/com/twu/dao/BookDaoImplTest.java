@@ -67,7 +67,6 @@ public class BookDaoImplTest {
         bookDao.selectBookByName("nn");
 
         assertEquals(bookTest.isState(), false);
-
     }
 
     @Test
