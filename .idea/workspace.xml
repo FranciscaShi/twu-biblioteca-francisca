@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aa14f853-54b3-4c37-a96a-b0bf103aaa39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/dao/CustomerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/dao/CustomerDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/dao/IMovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/dao/IMovieDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/dao/MovieDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/dao/MovieDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/dto/MovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/dto/MovieDto.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/dao/BookDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="990">
+              <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -267,7 +261,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549573222945" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549573300262" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -416,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549563465471</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added methods in BibliotecaApp">
+      <created>1549573269657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1549573269657</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -519,7 +520,8 @@
     <MESSAGE value="Added CustomerDto and MovieDto classes" />
     <MESSAGE value="Added ICustomerDao and IMovieDao interfaces" />
     <MESSAGE value="Added ICustomerDao and IMovieDao methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ICustomerDao and IMovieDao methods" />
+    <MESSAGE value="Added methods in BibliotecaApp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added methods in BibliotecaApp" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README">
@@ -753,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/dao/BookDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="990">
+          <caret line="70" column="21" lean-forward="true" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
