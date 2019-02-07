@@ -28,6 +28,10 @@ public class MovieDto {
         return director;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
     public boolean isState() {
         return state;
     }

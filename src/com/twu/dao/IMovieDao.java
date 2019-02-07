@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IMovieDao {
 
-    List<MovieDto> showMoviesAvailable();
+    List<String> showMoviesAvailable();
 
     boolean checkMovieByName(String movieName);
 

@@ -31,19 +31,21 @@ public class MovieDaoImpl {
         this.movies = movies;
     }
 
-    public List<MovieDto> showMoviesAvailable(){
-        List<MovieDto> moviesAvailable = new ArrayList<MovieDto>();
+    public List<String> showMoviesAvailable(){
+        List<String> moviesAvailable = new ArrayList<String>();
 
-        for (int index = 0; index < movies.size(); index++) {
+        for (int index = INITIAL_VALUE; index < movies.size(); index++) {
             if (movies.get(index).isState()){
-                moviesAvailable.add(movies.get(index));
+                String movie = "\n"+movies.get(index).getName()+" - "+movies.get(index).getDirector()+" - "+
+                        movies.get(index).getYear()+" - Rating:"+movies.get(index).getRating()+"\n";
+                moviesAvailable.add(movie);
             }
         }
         return moviesAvailable;
     }
 
     public boolean checkMovieByName(String movieName) {
-        for (int index = 0; index < movies.size(); index++) {
+        for (int index = INITIAL_VALUE; index < movies.size(); index++) {
             if (movies.get(index).getName().equalsIgnoreCase(movieName)){
                 return true;
             }
@@ -52,7 +54,7 @@ public class MovieDaoImpl {
     }
 
     public void checkOutByName(String movieName) {
-        for (int index = 0; index < movies.size(); index++) {
+        for (int index = INITIAL_VALUE; index < movies.size(); index++) {
             if (this.checkMovieByName(movieName)){
                 movies.get(index).setState(false);
             }

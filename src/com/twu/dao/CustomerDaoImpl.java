@@ -57,7 +57,7 @@ public class CustomerDaoImpl {
 
     public String seeUserInformation(String libraryNumber){
         for (int index = 0; index < customers.size(); index++) {
-            if (this.checkCustomerLibraryNumber(libraryNumber)){
+            if (customers.get(index).getLibraryNumber().equalsIgnoreCase(libraryNumber)){
                 return customers.get(index).getName()+" "+customers.get(index).getEmail()+" "+
                         customers.get(index).getPhoneNumber();
             }
