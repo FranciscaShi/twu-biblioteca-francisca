@@ -1,6 +1,7 @@
 package com.twu.dao;
 
 import com.twu.dto.BookDto;
+import com.twu.dto.CustomerDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class BookDaoImpl implements IBookDao {
         this.books = books;
     }
 
-    public List<String> showBooks(){
+    public List<String> showBooksAvailable(){
         List<String> bookList = new ArrayList<String>();
         for (int i=INITIAL_VALUE; i<books.size(); i++){
             int num = i+1;
@@ -51,12 +52,14 @@ public class BookDaoImpl implements IBookDao {
         }
     }
 
-    public void selectBookByName(String bookName){
+    public boolean selectBookByName(String bookName){
         for (int index=INITIAL_VALUE; index<books.size(); index++){
             if (books.get(index).getBookName().equalsIgnoreCase(bookName)){
                 books.get(index).setState(false);
+                return true;
             }
         }
+        return false;
     }
 
     public boolean checkBookName(String bookName){
@@ -66,6 +69,15 @@ public class BookDaoImpl implements IBookDao {
             }
         }
         return false;
+    }
+
+    @Override
+    public void addCustomerChekedOutBook(CustomerDto customer, String bookName) {
+        for (int index = INITIAL_VALUE; index < books.size(); index++) {
+            if (this.selectBookByName(bookName)){
+                books.get(index).setCustomer(customer);
+            }
+        }
     }
 
 

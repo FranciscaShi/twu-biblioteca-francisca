@@ -8,5 +8,7 @@ public interface IMovieDao {
 
     List<MovieDto> showMoviesAvailable();
 
-    void checkOutByName();
+    boolean checkMovieByName(String movieName);
+
+    void checkOutByName(String movieName);
 }

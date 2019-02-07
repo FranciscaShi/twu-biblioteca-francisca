@@ -42,7 +42,7 @@ public class BookDaoImplTest {
         BookDaoImpl bookDao = new BookDaoImpl();
         bookDao.setBooks(booksFake);
 
-        assertEquals(bookDao.showBooks().size(),2);
+        assertEquals(bookDao.showBooksAvailable().size(),2);
     }
 
     @Test

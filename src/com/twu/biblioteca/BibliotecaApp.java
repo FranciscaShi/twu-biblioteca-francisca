@@ -33,7 +33,7 @@ public class BibliotecaApp {
 
                 switch (opcion) {
                     case 1:
-                        System.out.println("List of books \n" + bookDao.showBooks());
+                        System.out.println("List of books \n" + bookDao.showBooksAvailable());
 
                         Scanner choice;
                         int choiceNumber;
@@ -116,7 +116,7 @@ public class BibliotecaApp {
         clientAnswer = answer.nextLine();
 
         if (clientAnswer.equalsIgnoreCase("yes")) {
-            System.out.println(bookDao.showBooks());
+            System.out.println(bookDao.showBooksAvailable());
         } else {
             choiceNumber = 3;
         }
@@ -153,7 +153,7 @@ public class BibliotecaApp {
         clientAnswer = answer.nextLine();
 
         if (clientAnswer.equalsIgnoreCase("yes")) {
-            System.out.println(bookDao.showBooks());
+            System.out.println(bookDao.showBooksAvailable());
         } else {
             choiceNumber = 3;
         }

@@ -9,22 +9,33 @@ public class CustomerDto {
     private String phoneNumber;
     private String libraryNumber;
     private String password;
-    private List<BookDto> booksCheckedOut;
 
-    public CustomerDto(String name, String email, String phoneNumber, String libraryNumber, String password, List<BookDto> booksCheckedOut) {
+    public CustomerDto(String name, String email, String phoneNumber, String libraryNumber, String password) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.libraryNumber = libraryNumber;
         this.password = password;
-        this.booksCheckedOut = null;
     }
 
-    public List<BookDto> getBooksCheckedOut() {
-        return booksCheckedOut;
+    public String getName() {
+        return name;
     }
 
-    public void setBooksCheckedOut(List<BookDto> booksCheckedOut) {
-        this.booksCheckedOut = booksCheckedOut;
+    public String getEmail() {
+        return email;
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getLibraryNumber() {
+        return libraryNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 }
