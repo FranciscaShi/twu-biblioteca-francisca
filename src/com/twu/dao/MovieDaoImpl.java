@@ -46,7 +46,7 @@ public class MovieDaoImpl {
 
     public boolean checkMovieByName(String movieName) {
         for (int index = INITIAL_VALUE; index < movies.size(); index++) {
-            if (movies.get(index).getName().equalsIgnoreCase(movieName)){
+            if (movies.get(index).getName().equalsIgnoreCase(movieName) && movies.get(index).isState()){
                 return true;
             }
         }
@@ -55,7 +55,7 @@ public class MovieDaoImpl {
 
     public void checkOutByName(String movieName) {
         for (int index = INITIAL_VALUE; index < movies.size(); index++) {
-            if (this.checkMovieByName(movieName)){
+            if (movies.get(index).getName().equalsIgnoreCase(movieName)){
                 movies.get(index).setState(false);
             }
         }

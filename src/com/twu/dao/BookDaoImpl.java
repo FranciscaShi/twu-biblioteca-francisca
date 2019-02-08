@@ -65,16 +65,16 @@ public class BookDaoImpl implements IBookDao {
     public boolean checkBookName(String bookName){
         for (int index=INITIAL_VALUE; index<books.size(); index++){
             if (books.get(index).getBookName().equalsIgnoreCase(bookName)){
-               return true;
+                return true;
             }
         }
         return false;
     }
 
-    @Override
-    public void addCustomerChekedOutBook(CustomerDto customer, String bookName) {
-        for (int index = INITIAL_VALUE; index < books.size(); index++) {
-            if (this.selectBookByName(bookName)){
+    public void addCustomerChekedOutBook(String customer, String bookName){
+        for (int index=INITIAL_VALUE; index<books.size(); index++){
+            if (books.get(index).getBookName().equalsIgnoreCase(bookName)){
+                books.get(index).setState(false);
                 books.get(index).setCustomer(customer);
             }
         }

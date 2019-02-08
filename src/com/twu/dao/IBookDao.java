@@ -11,7 +11,7 @@ public interface IBookDao {
     void returnBookByName(String bookName);
     boolean selectBookByName(String bookName);
     boolean checkBookName(String bookName);
-    void addCustomerChekedOutBook(CustomerDto customer, String bookName);
+    void addCustomerChekedOutBook(String customer, String bookName);
 
 }
 

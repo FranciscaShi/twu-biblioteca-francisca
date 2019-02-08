@@ -4,8 +4,12 @@ package com.twu.biblioteca;
 import com.twu.dao.BookDaoImpl;
 import com.twu.dao.CustomerDaoImpl;
 import com.twu.dao.MovieDaoImpl;
+import com.twu.dto.CustomerDto;
+import com.twu.dto.MovieDto;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.List;
 
 public class BibliotecaApp {
 
@@ -40,7 +44,7 @@ public class BibliotecaApp {
                             System.out.println("\nPlease, select the number of the action did you need");
                             System.out.println("1. Return a book");
                             System.out.println("2. Select a book");
-                            System.out.println("3. Out of system");
+                            System.out.println("4. Out of system");
 
                             String libraryNumber = customerLogin(customerDao);
 
@@ -73,6 +77,7 @@ public class BibliotecaApp {
                                     choiceNumber = 4;
                                     break;
                                 case 4:
+
                                     break;
                             }
                         } while (choiceNumber != 4);
@@ -152,11 +157,12 @@ public class BibliotecaApp {
     }
 
     private static void checkOutAMovie(MovieDaoImpl movieDao) {
+
         System.out.println("Check out a Movie");
         Scanner nameOfMovie;
         String movieName;
         nameOfMovie = new Scanner(System.in);
-        int checkMovieName = 1;
+        int checkMovieName;
         do {
             System.out.println("Write the name of the movie did you need: ");
             movieName = nameOfMovie.nextLine();
@@ -165,11 +171,13 @@ public class BibliotecaApp {
                 movieDao.checkOutByName(movieName);
                 checkMovieName = 1;
             } else {
-                System.out.println("Sorry, that is not a valid movie to return\nPlease try again...\n");
+                System.out.println("Sorry, this movie is not available\nPlease try again...\n");
                 checkMovieName = 2;
             }
         }while (checkMovieName !=1);
+
         System.out.println("\nThanks you! Enjoy the movie " + movieName);
+
     }
 
     private static int selectBook(BookDaoImpl bookDao, int choiceNumber) {
